@@ -1,0 +1,124 @@
+/* Main pricing section */
+.pricing {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  padding: 100px 0 50px 0;
+  background: #f0f0f0; /* Adjust background color for theme */
+}
+
+/* Heading styles */
+.pricing h1 {
+  font-size: 2.5rem;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  color: #333; /* Text color */
+}
+
+/* Pricing cards wrapper */
+.pricing .wrapper {
+  display: flex;
+  gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+/* Individual pricing card */
+.pricing .wrapper .card {
+  flex: 1;
+  position: relative;
+  height: 700px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden;
+  background: #fff; /* Card background color */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for cards */
+.pricing .wrapper .card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image styles */
+.pricing .wrapper .card img {
+  width: 100%;
+  height: 250px; /* Fixed height */
+  object-fit: cover; /* Ensure proper image fitting */
+}
+
+/* Title styles */
+.pricing .wrapper .card .title {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Title font styles */
+.pricing .wrapper .card .title h1 {
+  font-size: 2rem;
+  color: #007bff; /* Custom color for the title */
+}
+
+.pricing .wrapper .card .title h3 {
+  font-size: 1.5rem;
+  color: #555; /* Slightly darker color */
+}
+
+/* Description styles */
+.pricing .wrapper .card .description {
+  background: #007bff; /* Card description background color */
+  color: #fff; /* Text color */
+  padding: 20px;
+  flex: 1;
+}
+
+/* Feature list styles */
+.pricing .wrapper .card .description p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 5px 0; /* Consistent spacing */
+}
+
+/* Button styles */
+.pricing .wrapper .card .description a.join-btn {
+  display: inline-block;
+  background: #ff6600; /* Button color */
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded button */
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s; /* Smooth button transition */
+  margin-top: 10px; /* Spacing above button */
+}
+
+/* Button hover effect */
+.pricing .wrapper .card .description a.join-btn:hover {
+  background: #e55b00; /* Darker button color on hover */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1520px) {
+  .pricing {
+    padding: 50px 20px;
+  }
+  .pricing .wrapper {
+    min-width: 100%;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 840px) {
+  .pricing .wrapper {
+    flex-direction: column;
+    align-items: center; /* Center cards on small screens */
+  }
+  .pricing .wrapper .card {
+    width: 90%; /* Responsive card width */
+  }
+}

@@ -1,0 +1,82 @@
+.gallery {
+  background: #111;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.gallery h1 {
+  color: #0095ff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Flexbox Grid System for Gallery */
+.gallery .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery .images div {
+  position: relative;
+  flex: 1 1 calc(25% - 15px); /* 4 images per row */
+  overflow: hidden;
+  height: 300px; /* Set a consistent height for all images */
+}
+
+.gallery .images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+/* Image hover effect */
+.gallery .images div:hover img {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* Overlay effect on hover */
+.gallery .images div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery .images div:hover::before {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .gallery .images div {
+    flex: 1 1 calc(33.33% - 15px); /* 3 images per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery .images div {
+    flex: 1 1 calc(50% - 15px); /* 2 images per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery .images div {
+    flex: 1 1 100%; /* 1 image per row */
+  }
+
+  .gallery h1 {
+    font-size: 2rem;
+  }
+}

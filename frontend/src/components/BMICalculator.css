@@ -1,0 +1,96 @@
+.bmi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 80px 0 50px 0; /* Adjusted padding */
+  background: linear-gradient(45deg, #0a2b42, #60698b);
+}
+
+.bmi h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff; /* Slightly brighter white for contrast */
+}
+
+.bmi .container {
+  display: flex;
+  gap: 40px; /* Reduced gap for better spacing */
+  width: 100%; /* Set to 100% for responsive design */
+  max-width: 1200px; /* Adjusted max-width for better responsiveness */
+  color: #ffffff;
+}
+
+.bmi .form-wrapper {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding for form wrapper */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
+}
+
+.bmi .image-wrapper {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for image */
+}
+
+.bmi .image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.bmi .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Adjusted gap */
+}
+
+.bmi .input-group label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.bmi .input-group input,
+.bmi .input-group select {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8); /* Slightly less transparent */
+  color: #333;
+}
+
+.bmi .input-group input:focus,
+.bmi .input-group select:focus {
+  outline: none;
+  border: 2px solid #0095ff; /* Border color on focus */
+}
+
+.bmi .form-wrapper button {
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff; /* White text */
+  background: #0095ff; /* Button background color */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
+  margin-top: 16px; /* Margin for submit button */
+}
+
+.bmi .form-wrapper button:hover {
+  background: #0077cc; /* Darker blue on hover */
+}
+
+@media (max-width: 735px) {
+  .bmi .container {
+    flex-direction: column; /* Stack form and image on small screens */
+    gap: 20px; /* Adjusted gap */
+  }
+}
